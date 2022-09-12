@@ -516,7 +516,7 @@ header{
 }
 .video{
     width: 100%;
-    margin-top: 110px;
+    margin-top: 60px;
     position: relative;
     .pattern4{
         position: absolute;
@@ -530,7 +530,33 @@ header{
         right: 0;
         z-index: 1;
     }
+    .pattern1{
+        position: absolute;
+        top: -15%;
+        right: 0;
+        z-index: 2;
+    }
+    .pattern2{
+        position: absolute;
+        top: 10%;
+        right: 0;
+        z-index: 3;
+    }
+    .pattern8{
+        position: absolute;
+        bottom: -15%;
+        left: 0;
+        z-index: 2;
+    }
+    .pattern9{
+        position: absolute;
+        bottom: 10%;
+        left: 0;
+        z-index: 3;
+    }
     .container{
+        display: flex;
+        flex-direction: column;
         .video__box{
             width: 100%;
             height: 560px;
@@ -539,6 +565,15 @@ header{
             .vid{
                 width: 100%;
                 height: 100%;
+            }
+        }
+        .button{
+            margin-top: 50px;
+            a{
+                width: 100%;
+                margin: auto;
+                text-decoration: none;
+                color: #333333;
             }
         }
     }
@@ -929,13 +964,21 @@ footer{
             margin: 60px auto;
             display: flex;
             justify-content: space-between;
-            
-            hr{
-                width: 10%;
+            position: relative;
+            .road__line{
+                width: 35%;
                 height: 10px;
-                
+                position: absolute;
+            }
+            .line__next{
                 background: #75C043;
-                border: none;
+                top: 40px;
+                right: 127px;
+            }
+            .line__prw{
+                background: #B7D1A6;
+                top: 40px;
+                left: 127px;
             }
             .road__button{
                 span{
@@ -1050,6 +1093,17 @@ footer{
             margin-bottom: 40px;
 
             color: #333333;
+            background: url("../img/Vector 6.svg") no-repeat;
+        }
+        .blue{
+            margin-top: 60px;
+            margin-bottom: 60px;
+            background: url("../img/Vector 10.svg") no-repeat;
+        }
+        p{
+            padding: 34px 10px;
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 9px;
         }
         .invest__preim{
             width: 90%;
@@ -1076,10 +1130,183 @@ footer{
                     font-weight: 400;
                     font-size: 20px;
                     line-height: 25px;
+                    padding: 0;
 
                     color: #000000;
+                    box-shadow: none;
                 }
             }
         }
+    }
+}
+.franchise{
+    margin-top: 75px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        h2{
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 61px;
+            margin-bottom: 40px;
+
+            color: #333333;
+            background: url("../img/Vector 6.svg") no-repeat;
+        }
+        p{
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 25px;
+            padding: 34px 10px;
+            color: #000000;
+
+            background: linear-gradient(180deg, rgba(84, 198, 211, 0) 0%, rgba(84, 198, 211, 0.12) 100%);
+            filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+            border-radius: 9px;
+        }
+    }
+}
+.company{
+    .container{
+        display: flex;
+        flex-direction: column;
+        h2{
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 61px;
+
+            color: #333333;
+        }
+        p{
+            padding: 20px 30px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 25px;
+
+            color: #000000;
+            background: linear-gradient(180deg, rgba(87, 206, 220, 0) 0%, rgba(12, 167, 185, 0.12) 100%);
+            filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+            border-radius: 9px;
+        }
+    }
+}
+.centers{
+    margin-top: 20px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        h2{
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 61px;
+            margin-bottom: 40px;
+
+            color: #333333;
+            background: url("../img/Vector 6.svg") no-repeat;
+            margin-bottom: 20px;
+        }
+        .tab {
+            overflow: hidden;
+        }
+        /* Style the buttons that are used to open the tab content */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 10px 15px;
+            transition: 0.3s;
+
+            font-weight: 400;
+            font-size: 35px;
+            line-height: 43px;
+
+            color: #686767;
+            margin-right: 30px;
+            margin-bottom: 30px;
+
+            border: 3px solid #D9D9D9;
+            border-radius: 5px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            border: 3px solid #39B54A;
+            background: #39b54a9f;
+            color: #fff;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            border: 3px solid #39B54A;
+            background: #39B54A;
+            color: #fff;
+        }
+
+        /* Style the tab content */
+        .tabcontent,.tabcontent2 {
+            display: none;
+            flex-wrap: wrap;
+            .tab__city{
+                width: 30%;
+                max-width: 355px;
+                background: linear-gradient(179.93deg, rgba(233, 252, 255, 0.06) 36.94%, rgba(223, 248, 252, 0.28) 36.94%, rgba(137, 217, 227, 0.62) 99.94%);
+                box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 12px;
+                overflow: hidden;
+                padding-bottom: 30px;
+                margin: 10px 5px;
+                .city__img{
+                    width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .city__description{
+                    padding-left: 15px;
+                    margin-bottom: 36px;
+                    margin-top: 25px;
+                    h3{
+                        font-weight: 700;
+                        font-size: 30px;
+                        line-height: 37px;
+    
+                        color: #000000;
+                        margin-bottom: 10px;
+                    }
+                    p{
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 22px;
+    
+                        color: #000000;
+                        span{
+                            font-weight: 700;
+                        }
+                        margin-bottom: 5px;
+                    }
+                }
+                .city__button{
+                    width: 100%;
+                    display: flex;
+                    a{
+                        margin: 0 auto;
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 25px;
+
+                        color: #000000;
+
+                        background: linear-gradient(184.3deg, #FAE22C 3.5%, #FFC907 89.79%);
+                        border-radius: 3px;
+                        text-decoration: none;
+                        padding: 10px 30px;
+                    }
+                }
+            }
+        }
+
     }
 }
