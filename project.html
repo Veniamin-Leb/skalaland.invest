@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="assets/CSS/stylesheet.css">
+    <link rel="stylesheet" href="assets/CSS/style-mobile.css">
     <link rel="stylesheet" href="assets/CSS/style.css">
     <title>Document</title>
 </head>
 <body>
-    <header>
+    <header id="navbar">
         <div class="container">
             <div class="header__box">
                 <div class="box__links">
@@ -29,6 +30,28 @@
                     <a href="about.html">Наши центры</a>
                 </div>
             </div>
+            <div class="header__mobile">
+                <div class="mobile__links">
+                    <a href="index.html">
+                        <img src="assets/img/logo.png" alt="#">
+                    </a>
+                </div>
+                <div class="mobile__links" id="burger">
+                    <a href="#" id="crest">
+                        <hr>
+                        <hr>
+                        <hr>
+                    </a>
+                </div>
+                <div class="mobile__menu hidden" id="mobile">
+                    <a href="index.html#1">О нас</a>
+                    <a href="index.html#2">Проекты</a>
+                    <a href="index.html#3">Отзывы</a>
+                    <a href="index.html#4">Контакты</a>
+                    <a href="invest.html">Инвестиции</a>
+                    <a href="about.html">Наши центры</a>
+                </div>
+            </div>
         </div>
     </header>
     <div class="breadcumbs">
@@ -38,7 +61,7 @@
             <p>Проект</p>
         </div>
     </div>
-    <div class="pro">
+    <div class="pro" id="main">
         <div class="container">
             <div class="pro__name">
                 <div class="name__back">
@@ -293,10 +316,9 @@
         </div>
     </footer>
 
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="../jquery/dist/jquery.js"></script>
-     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 </html>

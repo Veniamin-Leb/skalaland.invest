@@ -1,3 +1,29 @@
+let nav = $("#navbar")
+let main = $("#main");
+let crest = $("#crest");
+let burger = $("#burger")
+let mobile = $("#mobile");
+let mainH;
+let scrollPos = $(window).scrollTop();
+
+$(window).on("scroll load resize", function(){
+  mainH = main.innerHeight();
+  scrollPos = $(this).scrollTop();
+
+
+  if (scrollPos > mainH) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+});
+
+burger.on("click", function(event){
+  event.preventDefault();
+  mobile.toggleClass("hidden");
+  crest.toggleClass("rot");
+});
+
 $('.banner').slick({
     infinite: true,
     slidesToShow: 1,
@@ -76,3 +102,7 @@ function openCity2(evt, cityName2) {
   evt.currentTarget.className += " active";
 }
 document.getElementById("defaultOpen2").click();
+
+
+
+
